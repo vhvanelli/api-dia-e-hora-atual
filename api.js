@@ -11,8 +11,11 @@ const day = daysOfWeek[now.getDay()];
 //HORA DO DIA
 const hour =  now.getHours();
 
-app.post('/', (req, res) => {
-    res.status(200).json({ dia: day, hora: hour })
+app.get('/', (req, res) => {
+    res.send("Funcionando")
+})
+app.post('/dia-hora', (req, res) => {
+    res.status(202).json({ dia: day, hora: hour })
 })
 
  app.listen(port, () => console.log('Rodando na no localhost:3000'));
