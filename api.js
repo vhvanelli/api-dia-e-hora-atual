@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.send("Funcionando");
 })
 app.post('/dia-hora', (req, res) => {
-    res.status(202).json({ dia: day, hora: hour, horarioAtendimento : openHours });
+    res.status(202).json({ dia: day, hora: hour, horarioAtendimento : false });
 })
 
  app.listen(PORT);
